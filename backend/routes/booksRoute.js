@@ -70,7 +70,7 @@ router.get("/:title", async (request, response) => {
   });
 
 // Route for checking book availability
-router.get("/availability/:title", async (request, response) => {
+router.get("/availability/:author", async (request, response) => {
   try {
     const { title } = request.params;
 
@@ -88,6 +88,23 @@ router.get("/availability/:title", async (request, response) => {
       return response.status(200).json({ message: "Book is not available" });
     }
   } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+
+//Route to get a book by its Author
+router.get("/author/:author", async (request, response) => {
+  try {
+
+   //get the book author from the request parameters
+    const { author } = request.params;
+
+    //find thier books in the database
+    const book = await Book.find({ author })
+    return response.status(200).json(book);} 
+    
+    catch (error) {
     console.log(error.message);
     response.status(500).send({ message: error.message });
   }
