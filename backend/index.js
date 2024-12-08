@@ -1,6 +1,6 @@
 import express from 'express';
-import { PORT } from './config.js';
-
+import { PORT , mongoDBURL} from './config.js';
+import mongoose from 'mongoose';
 
 const app = express();
 
@@ -11,6 +11,10 @@ app.get('/', (request, response) => {
   return response.status(233).send('Welcome To MERN Stack Tutorial');
 });
 
-app.listen(PORT, () => {
-  console.log(`App is listening to port: ${PORT}`);
-});
+//connect to MongoDB using mongoose
+mongoose.connect(mongoDBURL)
+    .then(() => {  //start the server only if connection is successful
+     console.log('Successful Connection to Database');
+     app.listen(PORT, () => { console.log(`App is listening to port: ${PORT}`); });
+    })
+    .catch((error) => {console.log(error);});
