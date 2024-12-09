@@ -113,8 +113,8 @@ This project is a Backend Book Catalog System built with a Node.js Express and M
 #
 
 ### 4. **Search for a Book by Author**
-**Endpoint**: `GET /books/:author`  
-**Example**: `http://localhost:3000/books/Naguib Mahfouz`
+**Endpoint**: `GET /books/author/:author`  
+**Example**: `http://localhost:3000/books/author/Naguib Mahfouz`
 
 **Response**:
 
