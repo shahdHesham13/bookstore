@@ -70,7 +70,7 @@ router.get("/:title", async (request, response) => {
   });
 
 // Route for checking book availability
-router.get("/availability/:author", async (request, response) => {
+router.get("/availability/:title", async (request, response) => {
   try {
     const { title } = request.params;
 

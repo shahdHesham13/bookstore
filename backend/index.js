@@ -16,7 +16,7 @@ app.use(cors());
 //get a resource from a server
 app.get('/', (request, response) => {
   console.log(request);
-  return response.status(200).send('Welcome To MERN Stack Tutorial');
+  return response.status(200).send('Hola!');
 });
 
 //route to create book
