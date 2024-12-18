@@ -89,7 +89,7 @@ This project is a Backend Book Catalog System built with a Node.js Express and M
     "__v": 0
 }
 ```
-![Add](path-to-add-book-screenshot.png)
+![Add](img/add.png)
 
 #
 
@@ -98,7 +98,7 @@ This project is a Backend Book Catalog System built with a Node.js Express and M
 
 **Response**:
 
-![List](path-to-list-all-books-screenshot.png)
+![List](img/list.png)
 
 #
 
@@ -108,17 +108,17 @@ This project is a Backend Book Catalog System built with a Node.js Express and M
 
 **Response**:
 
-![Search](path-to-search-book-screenshot.png)
+![Search](img/searchTitle.png)
 
 #
 
 ### 4. **Search for a Book by Author**
-**Endpoint**: `GET /books/:author`  
-**Example**: `http://localhost:3000/books/Naguib Mahfouz`
+**Endpoint**: `GET /books/author/:author`  
+**Example**: `http://localhost:3000/books/author/Naguib Mahfouz`
 
 **Response**:
 
-![Search](path-to-search-book-screenshot.png)
+![Search](img/searchAuthor.png)
 
 #
 
@@ -130,7 +130,7 @@ This project is a Backend Book Catalog System built with a Node.js Express and M
 ```json
 { "message": "Book is available" }
 ```
-![Availability](path-to-check-availability-screenshot.png)
+![Availability](img/availablity.png)
 
 
 #
